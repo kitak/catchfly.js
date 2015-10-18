@@ -1,0 +1,36 @@
+{
+  "name": "torimochi.js",
+  "version": "0.0.1",
+  "description": "",
+  "main": "lib/torimochi.js",
+  "scripts": {
+    "test": "npm run build && karma start karma.conf.js",
+    "build": "babel src --out-dir lib",
+    "watch": "babel src --out-dir lib --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/kitak/torimochi.js.git"
+  },
+  "keywords": [
+    "error",
+    "tools"
+  ],
+  "author": "Keisuke KITA",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kitak/torimochi.js/issues"
+  },
+  "homepage": "https://github.com/kitak/torimochi.js#readme",
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "jasmine-core": "^2.3.4",
+    "karma-babel-preprocessor": "^5.2.2",
+    "karma-jasmine": "^0.3.6",
+    "karma-phantomjs-launcher": "^0.2.1",
+    "phantomjs": "^1.9.18"
+  },
+  "files": [
+    "lib"
+  ]
+}
