@@ -1,7 +1,7 @@
 const torimochi = {};
 const originalOnErrorHandler = window.onerror;
 
-torimochi.start = function() {
+torimochi.enable = function() {
   window.onerror = (message, url, line, col, errror) => {
     let data = {
       message,
@@ -13,7 +13,7 @@ torimochi.start = function() {
   };
 };
 
-torimochi.stop = function() {
+torimochi.disable = function() {
   window.onerror = originalOnErrorHandler;
 };
 

@@ -5,7 +5,7 @@ describe('torimochi', function() {
 
     beforeEach(function() {
       torimochi.endpoint = 'http://example.com';
-      torimochi.start();
+      torimochi.enable();
 
       mockImage = {};
       Image = function() {
@@ -26,7 +26,7 @@ describe('torimochi', function() {
 
     afterEach(function() {
       mockImage = null;
-      torimochi.stop();
+      torimochi.disable();
       Image = originalImage;
     });
   });
