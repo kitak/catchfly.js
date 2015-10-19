@@ -30,4 +30,31 @@ describe('torimochi', function() {
       Image = originalImage;
     });
   });
+
+  describe('sendException', function() {
+    var originalImage = Image;
+    var mockImage = null;
+
+    beforeEach(function() {
+      torimochi.endpoint = 'http://example.com';
+      torimochi.enable();
+
+      mockImage = {};
+      Image = function() {
+        return mockImage;
+      };
+    });
+
+    it('should send message', function() {
+      var message = 'my message';
+      torimochi.sendException(new Error(message));
+      expect(mockImage.src).toMatch(encodeURIComponent(message));
+    });
+
+    afterEach(function() {
+      mockImage = null;
+      torimochi.disable();
+      Image = originalImage;
+    });
+  });
 });

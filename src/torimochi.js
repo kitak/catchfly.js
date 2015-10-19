@@ -32,10 +32,9 @@ torimochi.sendMessage = function(data) {
 };
 
 torimochi.sendException = function(error) {
-  let {message, trace} = {...error};
   let data = {
-    message,
-    trace
+    message: error.message,
+    trace: error.trace
   };
   this.sendMessage(data);
 };
