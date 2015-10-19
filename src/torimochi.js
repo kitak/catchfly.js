@@ -1,6 +1,8 @@
 const torimochi = {};
 const originalOnErrorHandler = window.onerror;
 
+torimochi.endpoint = '';
+
 torimochi.enable = function() {
   window.onerror = (message, url, line, col, errror) => {
     let data = {
