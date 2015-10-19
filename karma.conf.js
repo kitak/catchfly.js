@@ -6,7 +6,7 @@ module.exports = function(config) {
     basePath: '.',
     frameworks: ['jasmine'],
     files: [
-      'lib/torimochi.js',
+      'lib/catchfly.js',
       'test/*.js'
     ],
     exclude: [

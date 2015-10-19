@@ -1,6 +1,6 @@
-# torimochi.js
+# catchfly.js
 
-torimochi.js is a library for sending errors and exceptions in your website's JavaScript code.
+catchfly.js is a library for sending errors and exceptions in your website's JavaScript code.
 
 ## Installation
 
@@ -11,8 +11,8 @@ TODO
 Minimal example:
 
 ```javascript
-torimochi.endpoint = 'http://example.com/';
-torimochi.enable();
+catchfly.endpoint = 'http://example.com/';
+catchfly.enable();
 ```
 
 ## Data format

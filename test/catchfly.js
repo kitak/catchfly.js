@@ -1,11 +1,11 @@
-describe('torimochi', function() {
+describe('catchfly', function() {
   describe('error handling', function() {
     var originalImage = Image;
     var mockImage = null;
 
     beforeEach(function() {
-      torimochi.endpoint = 'http://example.com';
-      torimochi.enable();
+      catchfly.endpoint = 'http://example.com';
+      catchfly.enable();
 
       mockImage = {};
       Image = function() {
@@ -26,7 +26,7 @@ describe('torimochi', function() {
 
     afterEach(function() {
       mockImage = null;
-      torimochi.disable();
+      catchfly.disable();
       Image = originalImage;
     });
   });
@@ -36,8 +36,8 @@ describe('torimochi', function() {
     var mockImage = null;
 
     beforeEach(function() {
-      torimochi.endpoint = 'http://example.com';
-      torimochi.enable();
+      catchfly.endpoint = 'http://example.com';
+      catchfly.enable();
 
       mockImage = {};
       Image = function() {
@@ -47,13 +47,13 @@ describe('torimochi', function() {
 
     it('should send message', function() {
       var message = 'my message';
-      torimochi.sendException(new Error(message));
+      catchfly.sendException(new Error(message));
       expect(mockImage.src).toMatch(encodeURIComponent(message));
     });
 
     afterEach(function() {
       mockImage = null;
-      torimochi.disable();
+      catchfly.disable();
       Image = originalImage;
     });
   });

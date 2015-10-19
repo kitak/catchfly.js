@@ -1,8 +1,8 @@
 {
-  "name": "torimochi",
+  "name": "catchfly",
   "version": "0.0.1",
   "description": "",
-  "main": "lib/torimochi.js",
+  "main": "lib/catchfly.js",
   "scripts": {
     "test": "npm run build && karma start karma.conf.js",
     "build": "babel src --out-dir lib",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/kitak/torimochi.js.git"
+    "url": "git+ssh://git@github.com/kitak/catchfly.js.git"
   },
   "keywords": [
     "error",
@@ -19,9 +19,9 @@
   "author": "Keisuke KITA",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kitak/torimochi.js/issues"
+    "url": "https://github.com/kitak/catchfly.js/issues"
   },
-  "homepage": "https://github.com/kitak/torimochi.js#readme",
+  "homepage": "https://github.com/kitak/catchfly.js#readme",
   "devDependencies": {
     "babel": "^5.8.23",
     "jasmine-core": "^2.3.4",

@@ -1,9 +1,9 @@
-const torimochi = {};
+const catchfly = {};
 const originalOnErrorHandler = window.onerror;
 
-torimochi.endpoint = '';
+catchfly.endpoint = '';
 
-torimochi.enable = function() {
+catchfly.enable = function() {
   window.onerror = (message, url, line, col, errror) => {
     let data = {
       message,
@@ -15,11 +15,11 @@ torimochi.enable = function() {
   };
 };
 
-torimochi.disable = function() {
+catchfly.disable = function() {
   window.onerror = originalOnErrorHandler;
 };
 
-torimochi.sendMessage = function(data) {
+catchfly.sendMessage = function(data) {
   if (this.beforeSend(data) === false) {
     return;
   }
@@ -31,7 +31,7 @@ torimochi.sendMessage = function(data) {
   beacon.src = `${endpoint}/send.gif?${params}`;
 };
 
-torimochi.sendException = function(error) {
+catchfly.sendException = function(error) {
   let data = {
     message: error.message,
     stack: error.stack
@@ -39,15 +39,15 @@ torimochi.sendException = function(error) {
   this.sendMessage(data);
 };
 
-torimochi.beforeSend = function(data) {
+catchfly.beforeSend = function(data) {
   // TODO implement
   return true;
 };
 
 if (typeof define === 'function' && define['amd']) {
-  define(['exports'], torimochi);
+  define(['exports'], catchfly);
 } else if (typeof module === 'object' && module.exports) {
-  module.exports = torimochi;
+  module.exports = catchfly;
 } else {
-  window.torimochi = torimochi;
+  window.catchfly = catchfly;
 }
